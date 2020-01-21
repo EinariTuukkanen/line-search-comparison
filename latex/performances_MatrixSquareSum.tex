@@ -1,0 +1,83 @@
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Average performances of NewtonsMethod when minimizing MatrixSquareSum using different line search methods and 1000 randomly generated starting points}
+\label{tab:performance_results_MatrixSquareSum}
+\begin{tabular}{|l|r|r|r|r|r|r|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{1}{|c|}{Line Search Name} & \multicolumn{1}{c|}{$s$ (\%)} & \multicolumn{1}{c|}{$t$ (ms)} & \multicolumn{1}{c|}{$k$} & \multicolumn{1}{c|}{$f_n$} & \multicolumn{1}{c|}{$t_{LS}$ (ms)} & \multicolumn{1}{c|}{$k_{LS}$} \\
+ConstantSearch & 100.0 & 445.8 & 1.0 & 7.0 & 0.0 & 0.0 \\
+GoldenSectionSearch & 100.0 & 445.0 & 1.0 & 101.0 & 2.6 & 47.0 \\
+BisectionSearch & 99.6 & 535.9 & 1.0 & 35.0 & 89.0 & 28.0 \\
+DichotomousSearch & 100.0 & 892.1 & 2.0 & 91.0 & 2.0 & 40.0 \\
+FibonacciSearch & 100.0 & 453.2 & 1.0 & 119.0 & 4.5 & 55.0 \\
+UniformSearch & 100.0 & 455.0 & 1.0 & 156.0 & 7.2 & 148.0 \\
+NewtonsSearch & 100.0 & 443.5 & 1.0 & 8.0 & 0.5 & 0.0 \\
+ArmijoSearch & 99.7 & 3525.2 & 8.0 & 59.0 & 4.8 & 0.0 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Average performances of GradientDescentMethod when minimizing MatrixSquareSum using different line search methods and 1000 randomly generated starting points}
+\label{tab:performance_results_MatrixSquareSum}
+\begin{tabular}{|l|r|r|r|r|r|r|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{1}{|c|}{Line Search Name} & \multicolumn{1}{c|}{$s$ (\%)} & \multicolumn{1}{c|}{$t$ (ms)} & \multicolumn{1}{c|}{$k$} & \multicolumn{1}{c|}{$f_n$} & \multicolumn{1}{c|}{$t_{LS}$ (ms)} & \multicolumn{1}{c|}{$k_{LS}$} \\
+ConstantSearch & 98.9 & 4681.2 & 2942.0 & 8828.9 & 141.2 & 0.0 \\
+GoldenSectionSearch & 99.4 & 283.7 & 33.1 & 1784.1 & 155.4 & 841.0 \\
+BisectionSearch & 99.4 & 823.5 & 33.0 & 696.6 & 749.8 & 594.5 \\
+DichotomousSearch & 99.4 & 270.1 & 33.1 & 1491.1 & 142.6 & 694.4 \\
+FibonacciSearch & 99.4 & 354.3 & 33.1 & 2615.3 & 238.6 & 1223.5 \\
+UniformSearch & 99.4 & 389.2 & 33.1 & 3508.2 & 282.3 & 3372.9 \\
+NewtonsSearch & 99.4 & 453.3 & 33.1 & 241.2 & 355.7 & 35.3 \\
+ArmijoSearch & 99.6 & 209.3 & 25.8 & 343.2 & 97.9 & 185.5 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Average performances of ConjugateGradientMethod when minimizing MatrixSquareSum using different line search methods and 1000 randomly generated starting points}
+\label{tab:performance_results_MatrixSquareSum}
+\begin{tabular}{|l|r|r|r|r|r|r|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{1}{|c|}{Line Search Name} & \multicolumn{1}{c|}{$s$ (\%)} & \multicolumn{1}{c|}{$t$ (ms)} & \multicolumn{1}{c|}{$k$} & \multicolumn{1}{c|}{$f_n$} & \multicolumn{1}{c|}{$t_{LS}$ (ms)} & \multicolumn{1}{c|}{$k_{LS}$} \\
+ConstantSearch & 99.6 & 989.3 & 300.1 & 1216.2 & 23.9 & 0.0 \\
+GoldenSectionSearch & 100.0 & 429.5 & 50.0 & 2722.9 & 198.9 & 1258.5 \\
+BisectionSearch & 100.0 & 1154.9 & 50.0 & 1106.0 & 1003.4 & 900.0 \\
+DichotomousSearch & 100.0 & 426.3 & 50.0 & 2306.0 & 177.1 & 1050.0 \\
+FibonacciSearch & 100.0 & 517.8 & 50.0 & 4006.0 & 298.5 & 1850.0 \\
+UniformSearch & 100.0 & 558.2 & 50.0 & 5356.0 & 348.9 & 5100.0 \\
+NewtonsSearch & 100.0 & 552.8 & 50.6 & 364.0 & 347.5 & 35.0 \\
+ArmijoSearch & 100.0 & 405.3 & 50.0 & 914.8 & 157.6 & 558.8 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Average performances of HeavyBallMethod when minimizing MatrixSquareSum using different line search methods and 1000 randomly generated starting points}
+\label{tab:performance_results_MatrixSquareSum}
+\begin{tabular}{|l|r|r|r|r|r|r|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{1}{|c|}{Line Search Name} & \multicolumn{1}{c|}{$s$ (\%)} & \multicolumn{1}{c|}{$t$ (ms)} & \multicolumn{1}{c|}{$k$} & \multicolumn{1}{c|}{$f_n$} & \multicolumn{1}{c|}{$t_{LS}$ (ms)} & \multicolumn{1}{c|}{$k_{LS}$} \\
+ConstantSearch & 98.9 & 4711.5 & 2941.9 & 8828.8 & 134.5 & 0.0 \\
+GoldenSectionSearch & 99.4 & 227.7 & 24.3 & 1303.4 & 127.1 & 613.8 \\
+BisectionSearch & 99.4 & 666.6 & 24.4 & 514.9 & 607.0 & 438.8 \\
+DichotomousSearch & 99.4 & 209.4 & 24.4 & 904.9 & 99.3 & 414.4 \\
+FibonacciSearch & 99.4 & 353.2 & 32.7 & 2585.0 & 239.5 & 1209.3 \\
+UniformSearch & 99.4 & 322.4 & 24.4 & 2587.4 & 232.0 & 2486.9 \\
+NewtonsSearch & 99.4 & 375.1 & 24.4 & 179.6 & 295.0 & 26.4 \\
+ArmijoSearch & 99.6 & 217.3 & 25.8 & 343.1 & 99.6 & 185.4 \\
+
+\hline
+\end{tabular}
+\end{center}

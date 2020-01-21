@@ -1,0 +1,191 @@
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Parameters tested for BisectionSearch}
+\label{tab:params_BisectionSearch}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+Parameter & MatrixSquareSum & NegativeEntropy \\
+\hline
+$a$ & -10, -5 & -10, -5 \\
+$b$ & 10, 5 & 10, 5 \\
+$l$ & 0.0001, 1e-07 & 0.0001, 1e-07 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using BisectionSearch for optimizing the MatrixSquareSum function with 10 sample points.}
+\label{fig:param_comp_MatrixSquareSum_BisectionSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 1e-07) & 100.0 & 555.4 \\
+(-5, 10, 1e-07) & 100.0 & 597.9 \\
+(-5, 5, 1e-07) & 100.0 & 962.4 \\
+(-10, 5, 0.0001) & 100.0 & 1025.9 \\
+(-10, 10, 0.0001) & 100.0 & 1049.4 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_MatrixSquareSum_NewtonsMethod_BisectionSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 0.0001) & 100.0 & 836.1 \\
+(-5, 5, 0.0001) & 100.0 & 911.2 \\
+(-10, 10, 0.0001) & 100.0 & 921.0 \\
+(-5, 10, 0.0001) & 100.0 & 956.1 \\
+(-5, 5, 1e-07) & 100.0 & 1094.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_MatrixSquareSum_GradientDescentMethod_BisectionSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 0.0001) & 100.0 & 1152.1 \\
+(-5, 5, 0.0001) & 100.0 & 1153.7 \\
+(-10, 5, 0.0001) & 100.0 & 1157.4 \\
+(-5, 10, 0.0001) & 100.0 & 1175.7 \\
+(-5, 10, 1e-07) & 100.0 & 1575.7 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_MatrixSquareSum_ConjugateGradientMethod_BisectionSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 0.0001, 10.0) & 100.0 & 581.2 \\
+(-5, 10, 0.0001, 5.0) & 100.0 & 627.6 \\
+(-5, 10, 0.0001, 10.0) & 100.0 & 676.6 \\
+(-5, 5, 0.0001, 10.0) & 100.0 & 706.7 \\
+(-5, 5, 0.0001, 5.0) & 100.0 & 714.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_MatrixSquareSum_HeavyBallMethod_BisectionSearch}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using BisectionSearch for optimizing the NegativeEntropy function with 10 sample points.}
+\label{fig:param_comp_NegativeEntropy_BisectionSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 0.0001) & 100.0 & 1753.5 \\
+(-10, 5, 0.0001) & 100.0 & 2006.3 \\
+(-5, 5, 1e-07) & 100.0 & 2044.7 \\
+(-5, 10, 0.0001) & 100.0 & 2075.4 \\
+(-5, 5, 0.0001) & 100.0 & 2162.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_NegativeEntropy_NewtonsMethod_BisectionSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 0.0001) & 100.0 & 105.5 \\
+(-10, 5, 0.0001) & 100.0 & 114.6 \\
+(-5, 10, 0.0001) & 100.0 & 115.6 \\
+(-10, 5, 1e-07) & 100.0 & 128.9 \\
+(-5, 5, 1e-07) & 100.0 & 136.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_NegativeEntropy_GradientDescentMethod_BisectionSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 0.0001) & 100.0 & 883.4 \\
+(-10, 10, 0.0001) & 100.0 & 891.5 \\
+(-10, 5, 0.0001) & 100.0 & 893.8 \\
+(-5, 10, 0.0001) & 100.0 & 916.2 \\
+(-10, 5, 1e-07) & 100.0 & 1092.6 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_NegativeEntropy_ConjugateGradientMethod_BisectionSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 0.0001, 0.1) & 100.0 & 138.9 \\
+(-5, 5, 0.0001, 0.1) & 100.0 & 142.4 \\
+(-10, 5, 0.0001, 0.1) & 100.0 & 153.4 \\
+(-5, 10, 0.0001, 0.1) & 100.0 & 154.3 \\
+(-5, 5, 0.0001, 0.5) & 100.0 & 182.9 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_NegativeEntropy_HeavyBallMethod_BisectionSearch}
+\end{subfigure}
+\end{figure}

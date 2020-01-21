@@ -1,0 +1,192 @@
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Parameters tested for FibonacciSearch}
+\label{tab:params_FibonacciSearch}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+Parameter & MatrixSquareSum & NegativeEntropy \\
+\hline
+$a$ & -10, -5 & -10, -5 \\
+$b$ & 10, 5 & 10, 5 \\
+$\epsilon$ & 1e-08, 1e-10, 1e-12 & 1e-08, 1e-10, 1e-12 \\
+$l$ & 1e-06, 1e-10 & 1e-06, 1e-12 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using FibonacciSearch for optimizing the MatrixSquareSum function with 10 sample points.}
+\label{fig:param_comp_MatrixSquareSum_FibonacciSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-10, 1e-10) & 100.0 & 443.2 \\
+(-5, 5, 1e-12, 1e-10) & 100.0 & 452.3 \\
+(-5, 5, 1e-08, 1e-10) & 100.0 & 459.6 \\
+(-10, 5, 1e-10, 1e-10) & 100.0 & 460.9 \\
+(-10, 5, 1e-12, 1e-10) & 100.0 & 469.7 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_MatrixSquareSum_NewtonsMethod_FibonacciSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 10, 1e-12, 1e-06) & 100.0 & 355.6 \\
+(-5, 10, 1e-10, 1e-06) & 100.0 & 356.0 \\
+(-5, 5, 1e-12, 1e-06) & 100.0 & 366.8 \\
+(-10, 10, 1e-12, 1e-06) & 100.0 & 369.2 \\
+(-10, 5, 1e-12, 1e-06) & 100.0 & 369.4 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_MatrixSquareSum_GradientDescentMethod_FibonacciSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 10, 1e-10, 1e-06) & 100.0 & 473.8 \\
+(-10, 10, 1e-10, 1e-06) & 100.0 & 485.0 \\
+(-5, 10, 1e-12, 1e-06) & 100.0 & 490.3 \\
+(-10, 5, 1e-08, 1e-06) & 100.0 & 508.6 \\
+(-10, 10, 1e-12, 1e-06) & 100.0 & 516.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_MatrixSquareSum_ConjugateGradientMethod_FibonacciSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 1e-12, 1e-06, 10.0) & 100.0 & 251.4 \\
+(-5, 5, 1e-12, 1e-06, 10.0) & 100.0 & 268.5 \\
+(-5, 5, 1e-08, 1e-06, 10.0) & 100.0 & 273.0 \\
+(-10, 10, 1e-12, 1e-06, 10.0) & 100.0 & 273.5 \\
+(-5, 5, 1e-10, 1e-06, 10.0) & 100.0 & 273.5 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_MatrixSquareSum_HeavyBallMethod_FibonacciSearch}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using FibonacciSearch for optimizing the NegativeEntropy function with 10 sample points.}
+\label{fig:param_comp_NegativeEntropy_FibonacciSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-12, 1e-12) & 100.0 & 1834.0 \\
+(-10, 5, 1e-08, 1e-06) & 100.0 & 1908.9 \\
+(-10, 10, 1e-12, 1e-06) & 100.0 & 1946.8 \\
+(-5, 10, 1e-10, 1e-06) & 100.0 & 1957.9 \\
+(-10, 10, 1e-10, 1e-06) & 100.0 & 1967.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_NegativeEntropy_NewtonsMethod_FibonacciSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-12, 1e-06) & 100.0 & 74.5 \\
+(-5, 10, 1e-08, 1e-06) & 100.0 & 75.8 \\
+(-5, 5, 1e-10, 1e-06) & 100.0 & 78.0 \\
+(-5, 5, 1e-08, 1e-06) & 100.0 & 78.3 \\
+(-10, 5, 1e-12, 1e-12) & 100.0 & 78.6 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_NegativeEntropy_GradientDescentMethod_FibonacciSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-08, 1e-06) & 100.0 & 682.8 \\
+(-5, 5, 1e-12, 1e-06) & 100.0 & 683.5 \\
+(-5, 5, 1e-10, 1e-06) & 100.0 & 701.5 \\
+(-10, 5, 1e-10, 1e-06) & 100.0 & 728.0 \\
+(-5, 10, 1e-08, 1e-06) & 100.0 & 729.5 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_NegativeEntropy_ConjugateGradientMethod_FibonacciSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-12, 1e-06, 0.1) & 100.0 & 76.4 \\
+(-5, 5, 1e-10, 1e-06, 0.1) & 100.0 & 82.2 \\
+(-10, 5, 1e-08, 1e-06, 0.1) & 100.0 & 85.1 \\
+(-5, 10, 1e-10, 1e-06, 0.1) & 100.0 & 86.9 \\
+(-5, 5, 1e-08, 1e-06, 0.1) & 100.0 & 87.6 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_NegativeEntropy_HeavyBallMethod_FibonacciSearch}
+\end{subfigure}
+\end{figure}

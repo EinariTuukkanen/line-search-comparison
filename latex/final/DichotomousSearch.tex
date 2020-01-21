@@ -1,0 +1,192 @@
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Parameters tested for DichotomousSearch}
+\label{tab:params_DichotomousSearch}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+Parameter & MatrixSquareSum & NegativeEntropy \\
+\hline
+$a$ & -10, -5 & -10, -5 \\
+$b$ & 10, 5 & 5, 10 \\
+$\epsilon$ & 1e-07, 1e-08 & 1e-06, 1e-07 \\
+$l$ & 0.0001, 1e-05 & 0.0001, 1e-05 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using DichotomousSearch for optimizing the MatrixSquareSum function with 10 sample points.}
+\label{fig:param_comp_MatrixSquareSum_DichotomousSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 10, 1e-10, 1e-09) & 100.0 & 388.3 \\
+(-10, 10, 1e-10, 1e-09) & 100.0 & 436.4 \\
+(-5, 5, 1e-10, 1e-09) & 100.0 & 439.6 \\
+(-10, 5, 1e-10, 1e-09) & 100.0 & 455.0 \\
+(-5, 10, 1e-07, 1e-05) & 100.0 & 840.8 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_MatrixSquareSum_NewtonsMethod_DichotomousSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 1e-07, 1e-05) & 100.0 & 234.8 \\
+(-10, 5, 1e-08, 0.0001) & 100.0 & 241.2 \\
+(-5, 5, 1e-07, 0.0001) & 100.0 & 252.5 \\
+(-5, 10, 1e-08, 0.0001) & 100.0 & 252.9 \\
+(-10, 5, 1e-08, 1e-05) & 100.0 & 260.4 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_MatrixSquareSum_GradientDescentMethod_DichotomousSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 10, 1e-07, 1e-05) & 100.0 & 354.2 \\
+(-5, 10, 1e-07, 0.0001) & 100.0 & 382.0 \\
+(-5, 5, 1e-07, 0.0001) & 100.0 & 397.3 \\
+(-10, 10, 1e-08, 1e-05) & 100.0 & 406.2 \\
+(-10, 5, 1e-08, 0.0001) & 100.0 & 406.7 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_MatrixSquareSum_ConjugateGradientMethod_DichotomousSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-07, 0.0001, 10.0) & 100.0 & 173.6 \\
+(-10, 10, 1e-07, 0.0001, 10.0) & 100.0 & 185.4 \\
+(-5, 10, 1e-08, 0.0001, 10.0) & 100.0 & 193.9 \\
+(-10, 5, 1e-08, 1e-05, 5.0) & 100.0 & 202.6 \\
+(-5, 5, 1e-07, 1e-05, 10.0) & 100.0 & 205.2 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_MatrixSquareSum_HeavyBallMethod_DichotomousSearch}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using DichotomousSearch for optimizing the NegativeEntropy function with 10 sample points.}
+\label{fig:param_comp_NegativeEntropy_DichotomousSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 1e-07, 1e-05) & 100.0 & 1756.0 \\
+(-10, 5, 1e-06, 1e-05) & 100.0 & 1846.8 \\
+(-10, 10, 1e-06, 0.0001) & 100.0 & 1882.9 \\
+(-10, 5, 1e-06, 0.0001) & 100.0 & 1893.5 \\
+(-10, 10, 1e-06, 1e-05) & 100.0 & 1923.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_NegativeEntropy_NewtonsMethod_DichotomousSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-07, 0.0001) & 100.0 & 54.3 \\
+(-5, 10, 1e-06, 0.0001) & 100.0 & 61.7 \\
+(-5, 10, 1e-06, 1e-05) & 100.0 & 63.8 \\
+(-5, 5, 1e-07, 1e-05) & 100.0 & 64.6 \\
+(-5, 10, 1e-07, 0.0001) & 100.0 & 65.4 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_NegativeEntropy_GradientDescentMethod_DichotomousSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-06, 0.0001) & 100.0 & 640.6 \\
+(-10, 5, 1e-06, 0.0001) & 100.0 & 642.7 \\
+(-5, 5, 1e-07, 0.0001) & 100.0 & 645.3 \\
+(-5, 10, 1e-07, 0.0001) & 100.0 & 657.0 \\
+(-5, 5, 1e-06, 1e-05) & 100.0 & 680.9 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_NegativeEntropy_ConjugateGradientMethod_DichotomousSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\epsilon,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 5, 1e-06, 1e-05, 0.1) & 100.0 & 70.4 \\
+(-5, 5, 1e-06, 0.0001, 0.1) & 100.0 & 70.8 \\
+(-10, 5, 1e-07, 0.0001, 0.1) & 100.0 & 73.3 \\
+(-5, 10, 1e-06, 0.0001, 0.1) & 100.0 & 74.0 \\
+(-5, 5, 1e-07, 0.0001, 0.1) & 100.0 & 74.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_NegativeEntropy_HeavyBallMethod_DichotomousSearch}
+\end{subfigure}
+\end{figure}

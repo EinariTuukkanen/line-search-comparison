@@ -1,0 +1,193 @@
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Parameters tested for UniformSearch}
+\label{tab:params_UniformSearch}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+Parameter & MatrixSquareSum & NegativeEntropy \\
+\hline
+$a$ & -10, -5 & 0, -5 \\
+$b$ & 10, 5 & 5, 10 \\
+$n$ & 5, 10, 100 & 5, 10, 20 \\
+$m$ & 1, 1.5, 2 & 1, 1.5, 2 \\
+$l$ & 1e-06, 1e-08 & 1e-05, 1e-06 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using UniformSearch for optimizing the MatrixSquareSum function with 10 sample points.}
+\label{fig:param_comp_MatrixSquareSum_UniformSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 5, 1.5, 1e-06) & 100.0 & 424.0 \\
+(-5, 5, 10, 1.5, 1e-06) & 100.0 & 424.5 \\
+(-5, 5, 10, 1, 1e-08) & 100.0 & 449.1 \\
+(-10, 10, 5, 1.5, 1e-08) & 100.0 & 459.5 \\
+(-5, 10, 5, 1, 1e-06) & 100.0 & 463.1 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_MatrixSquareSum_NewtonsMethod_UniformSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 5, 1, 1e-06) & 100.0 & 231.0 \\
+(-5, 5, 5, 1, 1e-06) & 100.0 & 254.0 \\
+(-5, 10, 5, 1, 1e-06) & 100.0 & 287.5 \\
+(-5, 10, 10, 1, 1e-06) & 100.0 & 289.1 \\
+(-5, 5, 5, 1, 1e-08) & 100.0 & 381.7 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_MatrixSquareSum_GradientDescentMethod_UniformSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 10, 5, 1, 1e-06) & 100.0 & 328.1 \\
+(-10, 10, 5, 1, 1e-06) & 100.0 & 364.8 \\
+(-5, 5, 5, 1, 1e-06) & 100.0 & 371.5 \\
+(-10, 5, 5, 1, 1e-06) & 100.0 & 378.8 \\
+(-5, 5, 10, 1, 1e-06) & 100.0 & 529.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_MatrixSquareSum_ConjugateGradientMethod_UniformSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 5, 1, 1e-06, 10.0) & 100.0 & 137.3 \\
+(-5, 10, 5, 1, 1e-06, 10.0) & 100.0 & 155.6 \\
+(-5, 5, 5, 1, 1e-06, 10.0) & 100.0 & 170.2 \\
+(-10, 10, 5, 1, 1e-06, 5.0) & 100.0 & 185.4 \\
+(-5, 5, 5, 1, 1e-06, 5.0) & 100.0 & 200.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_MatrixSquareSum_HeavyBallMethod_UniformSearch}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using UniformSearch for optimizing the NegativeEntropy function with 10 sample points.}
+\label{fig:param_comp_NegativeEntropy_UniformSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(0, 5, 5, 1, 1e-05) & 100.0 & 1339.2 \\
+(-5, 5, 5, 1, 1e-05) & 100.0 & 2047.3 \\
+(-5, 10, 5, 1, 1e-05) & 100.0 & 2059.8 \\
+(0, 5, 5, 1, 1e-06) & 100.0 & 2068.5 \\
+(0, 5, 10, 1, 1e-06) & 100.0 & 2125.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_NegativeEntropy_NewtonsMethod_UniformSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(0, 5, 10, 1, 1e-05) & 100.0 & 139.2 \\
+(0, 5, 10, 1.5, 1e-06) & 100.0 & 159.3 \\
+(0, 5, 10, 1.5, 1e-05) & 100.0 & 160.6 \\
+(0, 5, 10, 1, 1e-06) & 100.0 & 161.2 \\
+(0, 5, 10, 2, 1e-06) & 100.0 & 169.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_NegativeEntropy_GradientDescentMethod_UniformSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(0, 5, 10, 1, 1e-05) & 100.0 & 6718.5 \\
+(0, 5, 5, 1, 1e-05) & 100.0 & 7035.3 \\
+(-5, 5, 10, 1, 1e-05) & 100.0 & 7444.3 \\
+(-5, 5, 5, 1, 1e-05) & 100.0 & 7807.4 \\
+(0, 5, 5, 1.5, 1e-05) & 100.0 & 8299.8 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_NegativeEntropy_ConjugateGradientMethod_UniformSearch}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,n,m,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(0, 5, 10, 1, 1e-05, 0.1) & 100.0 & 138.5 \\
+(0, 5, 5, 1.5, 1e-05, 0.1) & 100.0 & 154.5 \\
+(0, 5, 5, 1, 1e-05, 0.1) & 100.0 & 166.8 \\
+(0, 5, 10, 1, 1e-06, 0.1) & 100.0 & 177.9 \\
+(0, 5, 10, 1.5, 1e-05, 0.1) & 100.0 & 178.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_NegativeEntropy_HeavyBallMethod_UniformSearch}
+\end{subfigure}
+\end{figure}

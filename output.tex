@@ -1,0 +1,103 @@
+\begin{center}
+\rowcolors{2}{white}{gray!5}
+\captionof{table}{Parameters tested for GoldenSectionSearch}
+\label{tab:params_GoldenSectionSearch}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+Parameter & MatrixSquareSum \\
+\hline
+$a$ & -10, -5 \\
+$b$ & 10, 5 \\
+$l$ & 0.0001, 1e-07 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[H]
+\captionof{figure}{Best parameter permutations for different main methods using GoldenSectionSearch for optimizing the MatrixSquareSum function.}
+\label{fig:param_comp_GoldenSectionSearch}
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{GradientDescentMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 10, 1e-07) & 100.0 & 250.0 \\
+(-5, 5, 1e-07) & 100.0 & 419.0 \\
+(-5, 5, 0.0001) & 100.0 & 460.3 \\
+(-5, 10, 0.0001) & 100.0 & 486.8 \\
+(-10, 10, 0.0001) & 100.0 & 488.3 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with GradientDescentMethod}
+\label{subfig:param_comp_GoldenSectionSearch_GradientDescentMethod}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{NewtonsMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-10, 5, 1e-07) & 100.0 & 491.1 \\
+(-5, 5, 0.0001) & 100.0 & 688.8 \\
+(-5, 10, 1e-07) & 100.0 & 738.2 \\
+(-5, 10, 0.0001) & 100.0 & 819.4 \\
+(-5, 5, 1e-07) & 100.0 & 852.5 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with NewtonsMethod}
+\label{subfig:param_comp_GoldenSectionSearch_NewtonsMethod}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{ConjugateGradientMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l)$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(-5, 10, 0.0001) & 100.0 & 355.0 \\
+(-10, 5, 1e-07) & 100.0 & 385.5 \\
+(-5, 5, 0.0001) & 100.0 & 520.1 \\
+(-10, 10, 0.0001) & 100.0 & 522.7 \\
+(-10, 5, 0.0001) & 100.0 & 574.9 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with ConjugateGradientMethod}
+\label{subfig:param_comp_GoldenSectionSearch_ConjugateGradientMethod}
+\end{subfigure}
+\hfill
+\begin{subfigure}[ht]{.5\textwidth}
+\rowcolors{2}{white}{gray!5}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor{gray!25}
+\multicolumn{3}{|c|}{HeavyBallMethod} \\
+\hline
+\rowcolor{gray!25}
+$(a,b,l,\beta_{HBM})$ & $s$ (\%) & $t$ (ms) \\
+\hline
+(0.5, -5, 10, 1e-07) & 100.0 & 122.3 \\
+(0.5, -5, 5, 0.0001) & 100.0 & 128.0 \\
+(0.01, -5, 10, 1e-07) & 100.0 & 135.8 \\
+(0.5, -5, 5, 1e-07) & 100.0 & 140.8 \\
+(0.25, -5, 5, 1e-07) & 100.0 & 146.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 permutations with HeavyBallMethod}
+\label{subfig:param_comp_GoldenSectionSearch_HeavyBallMethod}
+\end{subfigure}
+\end{figure}
